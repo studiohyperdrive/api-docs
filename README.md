@@ -36,7 +36,7 @@ app.use(docs({
 ## Usage ##
 
 Swagger docs will be available on these routes:
-* HTML: [https://my-own-url.com/docs](https://my-own-url.com/docs)
-* JSON: [https://my-own-url.com/docs/json](https://my-own-url.com/docs/json)
+* HTML: [https://my-own-url.com/{baseUrl}/docs](https://my-own-url.com/{baseUrl}/docs)
+* JSON: [https://my-own-url.com/{baseUrl}/docs/json](https://my-own-url.com/{baseUrl}/docs/json)
 
-(Replace _https://my-own-url.com_ with your domain.)
+(Replace _https://my-own-url.com_ with your domain. _baseUrl_ is optional depending on your config.)
