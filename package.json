@@ -1,0 +1,28 @@
+{
+  "name": "@studiohyperdrive/docs",
+  "version": "1.0.0",
+  "description": "Studio Hyperdrive API docs npm package",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/studiohyperdrive/docs_npm.git"
+  },
+  "keywords": [],
+  "author": "Thomas Bormans <thomas.bormans@studiohyperdrive.be>",
+  "contributors": [
+    "Thomas Bormans <thomas.bormans@studiohyperdrive.be>"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/studiohyperdrive/docs_npm/issues"
+  },
+  "homepage": "https://github.com/studiohyperdrive/docs_npm#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@studiohyperdrive/eslint-config": "3.0.2",
+    "eslint-plugin-chai-friendly": "0.4.1"
+  }
+}
