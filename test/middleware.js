@@ -71,7 +71,7 @@ describe("Middleware", () => {
 	});
 
 	describe("Parse", () => {
-		it("Should continue when no type is defined", (done) => {
+		it("Should parse to html when no type is defined", (done) => {
 			const req = reqres.req({
 				params: {},
 				swagger: {
@@ -91,16 +91,16 @@ describe("Middleware", () => {
 			const res = reqres.res();
 
 			middleware.parse(req, res, (err) => {
-				expect(req.swagger).to.be.an("object");
-				expect(err).to.be.undefined;
+				expect(req.swagger).to.be.a("string");
+				expect(err).to.be.null;
 				done();
 			});
 		});
 
-		it("Should continue parse to html when type equals html", (done) => {
+		it("Should continue when type equals `json`", (done) => {
 			const req = reqres.req({
 				params: {
-					type: "html",
+					type: "json",
 				},
 				swagger: {
 					info: {
@@ -119,8 +119,8 @@ describe("Middleware", () => {
 			const res = reqres.res();
 
 			middleware.parse(req, res, (err) => {
-				expect(req.swagger).to.be.a("string");
-				expect(err).to.be.null;
+				expect(req.swagger).to.be.an("object");
+				expect(err).to.be.undefined;
 				done();
 			});
 		});
@@ -148,7 +148,7 @@ describe("Middleware", () => {
 
 			expect(() => {
 				middleware.parse(req, res);
-			}).to.throw("\`unknown\` is not a valid path param.");
+			}).to.throw("`unknown` is not a valid path param.");
 			done();
 		});
 	});

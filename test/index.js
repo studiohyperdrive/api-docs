@@ -33,19 +33,19 @@ describe("Lib", () => {
 					.get("docs")
 					.then((response) => {
 						expect(response.statusCode).to.be.equal(200);
-						expect(response.headers).to.have.property("content-type").to.contain("application/json");
+						expect(response.headers).to.have.property("content-type").to.contain("text/html");
 						expect(response.body).to.be.an("object");
 						done();
 					})
 					.catch(done);
 			});
 
-			it("Should call the /docs/html route", (done) => {
+			it("Should call the /docs/json route", (done) => {
 				dummy
-					.get("docs/html")
+					.get("docs/json")
 					.then((response) => {
 						expect(response.statusCode).to.be.equal(200);
-						expect(response.headers).to.have.property("content-type").to.contain("text/html");
+						expect(response.headers).to.have.property("content-type").to.contain("application/json");
 						done();
 					})
 					.catch(done);
