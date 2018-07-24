@@ -2,6 +2,12 @@
 
 Simple Node.js package which exposes Swagger docs both in JSON and HTML.
 
+## Installation ##
+
+```
+$ npm install -S @studiohyperdrive/api-docs
+```
+
 ## Setup ##
 
 ```js
