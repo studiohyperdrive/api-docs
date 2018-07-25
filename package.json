@@ -1,6 +1,6 @@
 {
   "name": "@studiohyperdrive/api-docs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Studio Hyperdrive API docs npm package",
   "main": "index.js",
   "scripts": {
