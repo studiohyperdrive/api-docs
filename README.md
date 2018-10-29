@@ -1,5 +1,7 @@
 # Node.js API Docs #
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/studiohyperdrive/api-docs.svg)](https://greenkeeper.io/)
+
 Simple Node.js package which exposes Swagger docs both in JSON and HTML.
 
 ## Installation ##
