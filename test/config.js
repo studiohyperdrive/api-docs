@@ -44,11 +44,17 @@ describe("Check config", () => {
 			"version",
 			"baseUrl",
 			"NODE_ENV",
+			"basePath",
+			"host",
+			"schemes",
 		]);
 
 		expect(conf.name).to.be.equal(packageJson.name);
 		expect(conf.version).to.be.equal(packageJson.version);
 		expect(conf.baseUrl).to.be.equal("/");
+		expect(conf.basePath).to.be.equal(null);
+		expect(conf.schemes).to.be.equal(null);
+		expect(conf.host).to.be.equal(null);
 
 		done();
 	});
@@ -60,6 +66,9 @@ describe("Check config", () => {
 			version: "1",
 			baseUrl: "base",
 			NODE_ENV: "NODE_ENV",
+			basePath: "v1/",
+			host: "studiohyperdrive.be",
+			schemes: ["https"],
 		});
 		expect(conf).to.have.all.keys([
 			"path",
@@ -67,11 +76,17 @@ describe("Check config", () => {
 			"version",
 			"baseUrl",
 			"NODE_ENV",
+			"basePath",
+			"host",
+			"schemes",
 		]);
 
 		expect(conf.name).to.be.equal("name");
 		expect(conf.version).to.be.equal("1");
 		expect(conf.path).to.be.equal("path/");
+		expect(conf.basePath).to.be.equal("v1/");
+		expect(conf.host).to.be.equal("studiohyperdrive.be");
+		expect(JSON.stringify(conf.schemes)).to.be.equal(JSON.stringify(["https"]));
 
 		done();
 	});
