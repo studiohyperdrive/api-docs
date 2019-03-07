@@ -16,6 +16,9 @@ app.use(docs({
     version: "1.0.0",
     baseUrl: "/",
     path: "path/to/docs/folder/",
+    basePath: "/v1",
+    host: "studiohyperdrive.be",
+    schemes: ["https", "http"],
     NODE_ENV: [
         "development"
     ]
@@ -38,6 +41,12 @@ app.use(docs({
     * Package will search for Swagger docs in folder and nested folders.
 * NODE_ENV
     * Package exposes two routes only in specific NODE_ENV's.
+* host
+    * The host of your api. Will fill up the `host` property
+* basePath
+    * The basePath of your api. Will fill up the `basePath` property.
+* schemes
+    * The scehemes of your api. Will fill up the `schemes` property
 
 ## Usage ##
 
