@@ -42,11 +42,14 @@ app.use(docs({
 * NODE_ENV
     * Package exposes two routes only in specific NODE_ENV's.
 * host
-    * The host of your api. Will fill up the `host` property
+    * host is the domain name or IP address (IPv4) of the host that serves the API.
+    * Empty by default.
 * basePath
-    * The basePath of your api. Will fill up the `basePath` property.
+    * basePath is the URL prefix for all API paths, relative to the host root. It must start with a leading slash /.
+    * Empty by default.
 * schemes
-    * The scehemes of your api. Will fill up the `schemes` property
+    * schemes are the transfer protocols used by the API. Swagger supports the http, https, and WebSocket schemes – ws and wss.
+    * Empty by default.
 
 ## Usage ##
 
