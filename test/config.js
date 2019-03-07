@@ -52,8 +52,8 @@ describe("Check config", () => {
 		expect(conf.name).to.be.equal(packageJson.name);
 		expect(conf.version).to.be.equal(packageJson.version);
 		expect(conf.baseUrl).to.be.equal("/");
-		expect(conf.basePath).to.be.equal(null);
-		expect(conf.schemes).to.be.equal(null);
+		expect(conf.basePath).to.be.equal("/");
+		expect(JSON.stringify(conf.schemes)).to.be.equal(JSON.stringify(["https"]));
 		expect(conf.host).to.be.equal(null);
 
 		done();

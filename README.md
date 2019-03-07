@@ -46,10 +46,10 @@ app.use(docs({
     * Empty by default.
 * basePath
     * basePath is the URL prefix for all API paths, relative to the host root. It must start with a leading slash /.
-    * Empty by default.
+    * Defaults to "/".
 * schemes
     * schemes are the transfer protocols used by the API. Swagger supports the http, https, and WebSocket schemes – ws and wss.
-    * Empty by default.
+    * Defaults to "https".
 
 ## Usage ##
 
