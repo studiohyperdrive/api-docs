@@ -16,6 +16,9 @@ app.use(docs({
     version: "1.0.0",
     baseUrl: "/",
     path: "path/to/docs/folder/",
+    basePath: "/v1",
+    host: "studiohyperdrive.be",
+    schemes: ["https", "http"],
     NODE_ENV: [
         "development"
     ]
@@ -27,6 +30,9 @@ app.use(docs({
 * name
     * Name of the API.
     * Defaults to the `package.json` name.
+* description
+    * Description of the API.
+    * Defaults to the `package.json` description.
 * version
     * Version of the API.
     * Defaults to the `package.json` version.
@@ -38,6 +44,15 @@ app.use(docs({
     * Package will search for Swagger docs in folder and nested folders.
 * NODE_ENV
     * Package exposes two routes only in specific NODE_ENV's.
+* host
+    * host is the domain name or IP address (IPv4) of the host that serves the API.
+    * Empty by default.
+* basePath
+    * basePath is the URL prefix for all API paths, relative to the host root. It must start with a leading slash /.
+    * Defaults to "/".
+* schemes
+    * schemes are the transfer protocols used by the API. Swagger supports the http, https, and WebSocket schemes – ws and wss.
+    * Defaults to "https".
 
 ## Usage ##
 
