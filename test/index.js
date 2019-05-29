@@ -54,7 +54,7 @@ describe("Lib", () => {
 						expect(JSON.stringify(response.body.schemes)).to.equal(JSON.stringify(["https"]));
 						expect(response.body.host).to.equal("studiohyperdrive.be");
 						expect(response.body.basePath).to.equal("/v1");
-						expect(response.body.description).to.equal("Studio Hyperdrive API docs npm package");
+						expect(response.body.info.description).to.equal("Studio Hyperdrive API docs npm package");
 
 						done();
 					})
