@@ -30,6 +30,9 @@ app.use(docs({
 * name
     * Name of the API.
     * Defaults to the `package.json` name.
+* description
+    * Description of the API.
+    * Defaults to the `package.json` description.
 * version
     * Version of the API.
     * Defaults to the `package.json` version.

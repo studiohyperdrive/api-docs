@@ -41,6 +41,7 @@ describe("Check config", () => {
 		expect(conf).to.have.all.keys([
 			"path",
 			"name",
+			"description",
 			"version",
 			"baseUrl",
 			"NODE_ENV",
@@ -51,6 +52,7 @@ describe("Check config", () => {
 
 		expect(conf.name).to.be.equal(packageJson.name);
 		expect(conf.version).to.be.equal(packageJson.version);
+		expect(conf.description).to.be.equal(packageJson.description);
 		expect(conf.baseUrl).to.be.equal("/");
 		expect(conf.basePath).to.be.equal("/");
 		expect(JSON.stringify(conf.schemes)).to.be.equal(JSON.stringify(["https"]));
@@ -63,6 +65,7 @@ describe("Check config", () => {
 		const conf = config({
 			path: "path/",
 			name: "name",
+			description: "some description",
 			version: "1",
 			baseUrl: "base",
 			NODE_ENV: "NODE_ENV",
@@ -73,6 +76,7 @@ describe("Check config", () => {
 		expect(conf).to.have.all.keys([
 			"path",
 			"name",
+			"description",
 			"version",
 			"baseUrl",
 			"NODE_ENV",
@@ -82,6 +86,7 @@ describe("Check config", () => {
 		]);
 
 		expect(conf.name).to.be.equal("name");
+		expect(conf.description).to.be.equal("some description");
 		expect(conf.version).to.be.equal("1");
 		expect(conf.path).to.be.equal("path/");
 		expect(conf.basePath).to.be.equal("v1/");
